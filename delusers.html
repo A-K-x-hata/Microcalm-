@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin - Delete user</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #0091D5;
+            color: white;
+            padding: 10px;
+            margin-top: 0;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #0091D5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0078A8;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #deleteResult {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Delete USER</h1>
+
+    <form action="delusers.php" method="post" id="deleteForm">
+        <label for="emailOrId">Enter Email or ID:</label>
+        <input type="text" name="emailOrId" required>
+
+        <label for="deleteOption">Select Delete Option:</label>
+        <select name="deleteOption" required>
+            <option value="email">Delete by Email</option>
+            <option value="id">Delete by ID</option>
+        </select>
+
+        <input type="submit" value="Delete user">
+    </form>
+   
+</body>
+</html>

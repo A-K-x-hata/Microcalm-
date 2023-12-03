@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin - Add Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #0091D5;
+            color: white;
+            padding: 15px;
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #0091D5;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0078A8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Admin</h1>
+
+    <form action="admin.php" method="POST" id="adminForm">
+        <label for="name">Enter Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="email">Enter Email:</label>
+        <input type="text" name="email" required>
+
+        <label for="password">Enter Password:</label>
+        <input type="password" name="pass" required>
+
+        <label for="id">Enter Admin ID:</label>
+        <input type="number" name="id" required>
+
+        <input type="submit" value="Add Admin">
+    </form>
+</body>
+</html>

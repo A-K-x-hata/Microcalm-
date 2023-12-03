@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Yoga Session</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1524863479829-916d8e77f114?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center fixed;
+            background-size: cover;
+            background-attachment: fixed;
+            margin-top:70px;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .custom-file-label::after {
+            content: "Browse";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-container">
+                    <h1 class="display-4 text-center">Add a Yoga Session</h1>
+                    <form action="yogaback.php" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="yogaName">Title:</label>
+                            <input type="text" class="form-control" id="yogaName" name="yogaName" placeholder="Enter the name">
+                        </div>
+                        <div class="form-group">
+                            <label for="benefits">Benefits:</label>
+                            <textarea class="form-control" id="benefits" name="benefits" rows="4" placeholder="Enter benefits"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="videoLink">Video Link:</label>
+                            <input type="text" class="form-control" id="videoLink" name="videoLink" placeholder="Enter video link">
+                        </div>
+                        <div class="form-group">
+                            <label for="imageUpload">Image:</label>
+                            <input type="file" class="form-control-file" id="imageUpload" name="imageUpload">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg mt-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
